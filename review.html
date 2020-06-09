@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Review</title>
+</head>
+<body>
+<h1>ISBN: {{ ISBN}} </h1>
+Goodread's Data :{{ data }}
+<div>
+    <form method="POST" action="/reviewtab">
+       <H1>Leave a review for {{ Title }}</H1> <input type="text" name="rat_review" id="rat_review" value="{{request.form.rat_review}}"style="height: 100px; width: 200px">
+
+
+
+    <input type="text" name="rat_book" placeholder="{{ Title }}" id="rat_book" value="{{Title}}">
+
+        <input type="Submit" value="Send Review">
+
+        </form>
+</div>
+</body>
+</html>
